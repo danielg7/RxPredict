@@ -43,6 +43,7 @@ shinyServer(function(input, output, session) {
     getData <- latlongReturnDF(lat = click$lat, long = click$lng, unitConvert = TRUE)
     interpData <- interpolateTime(getData,type = "spline")
     interpData$dt <- with_tz(interpData$dt, tzone = input$tz_input)
+    print(input$fuelModel)
     interpData2 <- fxn_firebehavior(interpData, input$fuelModel,LH = input$liveHFM,LW = input$liveWFM)
     rxData <<- prescription(df = interpData2,
                            tempHi = input$rxTempInput[2],

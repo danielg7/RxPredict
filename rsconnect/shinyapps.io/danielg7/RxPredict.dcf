@@ -5,8 +5,8 @@ account: danielg7
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1647824
-bundleId: 2723646
+bundleId: 2723977
 url: https://danielg7.shinyapps.io/RxPredict/
-when: 1578856844.93395
+when: 1578871932.88079
 asMultiple: FALSE
 asStatic: FALSE

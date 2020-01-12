@@ -159,14 +159,17 @@ fxn_firebehavior <- function(inputDF, fuelModel, LH = 120, LW = 130){
                          ROS = rep(NA,nrow(inputDF)))
   
   for(i in 1:nrow(inputDF)){
-    outputIn <- rothermel(surfFuel = fuelmodel_input,
+    try(outputIn <- rothermel(surfFuel = fuelmodel_input,
                           moisture = fuelMoisture[i,],
                           crownFuel = exampCrownFuel[i,],
-                          enviro = exampEnviro[i,])
+                          enviro = exampEnviro[i,]))
     #print(str(outputIn))
     
-    outputDF$FL[i] <- as.numeric(outputIn$fireBehavior$`Flame Length [m]`) * 3.2808
-    outputDF$ROS[i] <- as.numeric(outputIn$fireBehavior$`Rate of Spread [m/min]`) * 3.2808
+    try(
+    outputDF$FL[i] <- as.numeric(outputIn$fireBehavior$`Flame Length [m]`) * 3.2808)
+    
+    try(
+    outputDF$ROS[i] <- as.numeric(outputIn$fireBehavior$`Rate of Spread [m/min]`) * 3.2808)
     
     print(i)
   }
@@ -187,19 +190,19 @@ prescription <- function(df,tempHi = 75,tempLo = 50, windHi = 8, windLo = 3,rhHi
   df$flRx <- NA
   
   try(df[which(df$windspeed <= windHi & df$windspeed >= windLo),]$windRx <- "In Prescription")
-  df[which(is.na(df$windRx)),]$windRx <- "Out of Prescription"
+  try(df[which(is.na(df$windRx)),]$windRx <- "Out of Prescription")
   
   try(df[which(df$temp <= tempHi & df$temp >= tempLo),]$tempRx <- "In Prescription")
-  df[which(is.na(df$tempRx)),]$tempRx <- "Out of Prescription"
+  try(df[which(is.na(df$tempRx)),]$tempRx <- "Out of Prescription")
   
   try(df[which(df$rh <= rhHi & df$rh >= rhLo),]$rhRx <- "In Prescription")
-  df[which(is.na(df$rhRx)),]$rhRx <- "Out of Prescription"
+  try(df[which(is.na(df$rhRx)),]$rhRx <- "Out of Prescription")
   
   try(df[which(df$ffm <= ffmHi & df$ffm >= ffmLo),]$ffmRx <- "In Prescription")
-  df[which(is.na(df$ffmRx)),]$ffmRx <- "Out of Prescription"
+  try(df[which(is.na(df$ffmRx)),]$ffmRx <- "Out of Prescription")
   
   try(df[which(df$FL <= flHi & df$FL >= flLo),]$flRx <- "In Prescription")
-  df[which(is.na(df$flRx)),]$flRx <- "Out of Prescription"
+  try(df[which(is.na(df$flRx)),]$flRx <- "Out of Prescription")
   
   return(df)
 }

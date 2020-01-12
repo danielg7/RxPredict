@@ -42,7 +42,10 @@ input_LWFM <- sliderInput(inputId = "liveWFM",
 
 ### Fuel Model
 
-input_FuelModel <- selectInput("fuelModel", "Fuel Model:",choices = paste(row.names(fuelModels)," - ",fuelModels$description,sep="")) %>%
+list_fuelModel <- row.names(fuelModels)
+names(list_fuelModel) <- paste(row.names(fuelModels)," - ",fuelModels$description,sep="")
+
+input_FuelModel <- selectInput("fuelModel", "Fuel Model:",choices = list_fuelModel) %>%
   shinyInput_label_embed(shiny_iconlink() %>%
                            bs_embed_tooltip("Select primary fuel model."))
 
