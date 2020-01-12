@@ -10,3 +10,108 @@ Initialized empty Git repository in /Users/danielg7/Dropbox/Fire Management/RxPr
 Nothing specified, nothing added.
 Maybe you wanted to say 'git add .'?
 ]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git add .
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git commit -m "First commit"
+[master (root-commit) 0fe4665] First commit
+ 82 files changed, 3969 insertions(+)
+ create mode 100644 .Rproj.user/A5654463/console06/298C7B87
+ create mode 100644 .Rproj.user/A5654463/console06/298C7B87.env
+ create mode 100644 .Rproj.user/A5654463/console06/INDEX001
+ create mode 100644 .Rproj.user/A5654463/pcs/debug-breakpoints.pper
+ create mode 100644 .Rproj.user/A5654463/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/A5654463/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/A5654463/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/A5654463/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/A5654463/persistent-state
+ create mode 100644 .Rproj.user/A5654463/rmd-outputs
+ create mode 100644 .Rproj.user/A5654463/saved_source_markers
+ create mode 100644 .Rproj.user/A5654463/sources/prop/146CF960
+ create mode 100644 .Rproj.user/A5654463/sources/prop/3BBD3914
+ create mode 100644 .Rproj.user/A5654463/sources/prop/3CAB943B
+ create mode 100644 .Rproj.user/A5654463/sources/prop/3FF3C1C5
+ create mode 100644 .Rproj.user/A5654463/sources/prop/513EAB5C
+ create mode 100644 .Rproj.user/A5654463/sources/prop/52CF4A39
+ create mode 100644 .Rproj.user/A5654463/sources/prop/A7FCAD1D
+ create mode 100644 .Rproj.user/A5654463/sources/prop/AA7FEF3E
+ create mode 100644 .Rproj.user/A5654463/sources/prop/DAF4D1BB
+ create mode 100644 .Rproj.user/A5654463/sources/prop/F857B5D1
+ create mode 100644 .Rproj.user/A5654463/sources/prop/INDEX
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/10AC484C
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/10AC484C-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/1AB4308B-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/1B63B95B-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/1D200203-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/1F68F22D-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/2AE1F00F
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/2AE1F00F-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/3924E39B
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/3924E39B-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/3B651D52-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/3F9781FF-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/476E7511-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/4A0D43FF
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/4A0D43FF-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/5E0A0403-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/6AB2AE80-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/6D18CFBC-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/6F9588CB
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/6F9588CB-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/702E7CE8-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/88BDD2E2
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/88BDD2E2-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/92F307D9-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/94A14111-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/9AB3A1DA-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/9D832C7-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/A5AEDC8C-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/B83EE188-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/BE117BD9-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/BFEBEC3C-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/C1D87A89-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/CB24541D-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/D4EA4F66-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/D71951F9-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/DD54F2FF-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/DD9F864D-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/E99934B-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/E9F3B53-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/F829569A
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/F829569A-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/F859DB21-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/FA001CF-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/FA0DBC3D-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/FA781877
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/FA781877-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/FF5A2730-contents
+ create mode 100644 .Rproj.user/A5654463/sources/s-91840833/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 MD/FuelMoistures.png
+ create mode 100644 MD/about.md
+ create mode 100644 MD/help_fuelmoistures.md
+ create mode 100644 MD/interpolationPlot.jpeg
+ create mode 100644 RxPredict.Rproj
+ create mode 100644 functions.R
+ create mode 100644 rsconnect/shinyapps.io/danielg7/RxPredict.dcf
+ create mode 100644 server.R
+ create mode 100644 testing.R
+ create mode 100644 ui.R
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git remote add origin https://github.com/danielg7/RxPredict.git
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git remote -iv[K[Kv
+origin	https://github.com/danielg7/RxPredict.git (fetch)
+origin	https://github.com/danielg7/RxPredict.git (push)
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git push -u origin master
+Counting objects: 64, done.
+Delta compression using up to 4 threads.
+Compressing objects:   1% (1/56)   Compressing objects:   3% (2/56)   Compressing objects:   5% (3/56)   Compressing objects:   7% (4/56)   Compressing objects:   8% (5/56)   Compressing objects:  10% (6/56)   Compressing objects:  12% (7/56)   Compressing objects:  14% (8/56)   Compressing objects:  16% (9/56)   Compressing objects:  17% (10/56)   Compressing objects:  19% (11/56)   Compressing objects:  21% (12/56)   Compressing objects:  23% (13/56)   Compressing objects:  25% (14/56)   Compressing objects:  26% (15/56)   Compressing objects:  28% (16/56)   Compressing objects:  30% (17/56)   Compressing objects:  32% (18/56)   Compressing objects:  33% (19/56)   Compressing objects:  35% (20/56)   Compressing objects:  37% (21/56)   Compressing objects:  39% (22/56)   Compressing objects:  41% (23/56)   Compressing objects:  42% (24/56)   Compressing objects:  44% (25/56)   Compressing objects:  46% (26/56)   Compressing objects:  48% (27/56)   Compressing objects:  50% (28/56)   Compressing objects:  51% (29/56)   Compressing objects:  53% (30/56)   Compressing objects:  55% (31/56)   Compressing objects:  57% (32/56)   Compressing objects:  58% (33/56)   Compressing objects:  60% (34/56)   Compressing objects:  62% (35/56)   Compressing objects:  64% (36/56)   Compressing objects:  66% (37/56)   Compressing objects:  67% (38/56)   Compressing objects:  69% (39/56)   Compressing objects:  71% (40/56)   Compressing objects:  73% (41/56)   Compressing objects:  75% (42/56)   Compressing objects:  76% (43/56)   Compressing objects:  78% (44/56)   Compressing objects:  80% (45/56)   Compressing objects:  82% (46/56)   Compressing objects:  83% (47/56)   Compressing objects:  85% (48/56)   Compressing objects:  87% (49/56)   Compressing objects:  89% (50/56)   Compressing objects:  91% (51/56)   Compressing objects:  92% (52/56)   Compressing objects:  94% (53/56)   Compressing objects:  96% (54/56)   Compressing objects:  98% (55/56)   Compressing objects: 100% (56/56)   Compressing objects: 100% (56/56), done.
+Writing objects:   1% (1/64)   Writing objects:   3% (2/64)   Writing objects:   4% (3/64)   Writing objects:   6% (4/64)   Writing objects:   7% (5/64)   Writing objects:   9% (6/64)   Writing objects:  10% (7/64)   Writing objects:  12% (8/64)   Writing objects:  14% (9/64)   Writing objects:  15% (10/64)   Writing objects:  17% (11/64)   Writing objects:  18% (12/64)   Writing objects:  20% (13/64)   Writing objects:  21% (14/64)   Writing objects:  23% (15/64)   Writing objects:  25% (16/64)   Writing objects:  26% (17/64)   Writing objects:  28% (18/64)   Writing objects:  29% (19/64)   Writing objects:  31% (20/64)   Writing objects:  32% (21/64)   Writing objects:  34% (22/64)   Writing objects:  35% (23/64)   Writing objects:  37% (24/64)   Writing objects:  39% (25/64)   Writing objects:  40% (26/64)   Writing objects:  42% (27/64)   Writing objects:  43% (28/64)   Writing objects:  45% (29/64)   Writing objects:  46% (30/64)   Writing objects:  48% (31/64)   Writing objects:  51% (33/64)   Writing objects:  53% (34/64)   Writing objects:  54% (35/64)   Writing objects:  56% (36/64)   Writing objects:  57% (37/64)   Writing objects:  59% (38/64)   Writing objects:  60% (39/64)   Writing objects:  62% (40/64)   Writing objects:  65% (42/64)   Writing objects:  67% (43/64)   Writing objects:  68% (44/64)   Writing objects:  70% (45/64)   Writing objects:  71% (46/64)   Writing objects:  73% (47/64)   Writing objects:  75% (48/64)   Writing objects:  76% (49/64)   Writing objects:  78% (50/64)   Writing objects:  79% (51/64)   Writing objects:  81% (52/64)   Writing objects:  82% (53/64)   Writing objects:  84% (54/64)   Writing objects:  85% (55/64)   Writing objects:  87% (56/64)   Writing objects:  89% (57/64)   Writing objects:  90% (58/64)   Writing objects:  92% (59/64)   Writing objects:  93% (60/64)   Writing objects:  95% (61/64)   Writing objects:  96% (62/64)   Writing objects:  98% (63/64)   Writing objects: 100% (64/64)   Writing objects: 100% (64/64), 116.37 KiB | 1.79 MiB/s, done.
+Total 64 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)[Kremote: Resolving deltas:  10% (1/10)[Kremote: Resolving deltas:  40% (4/10)[Kremote: Resolving deltas:  50% (5/10)[Kremote: Resolving deltas:  60% (6/10)[Kremote: Resolving deltas:  80% (8/10)[Kremote: Resolving deltas:  90% (9/10)[Kremote: Resolving deltas: 100% (10/10)[Kremote: Resolving deltas: 100% (10/10), done.[K
+To https://github.com/danielg7/RxPredict.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git push -u origin master[12Premote -vv[C[C[C[Cte add origin https://github.com/danielg7/RxPredict.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[35Pcommit -m "First commit"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[7Padd .
