@@ -1,0 +1,54 @@
+data(fuelModels, fuelMoisture,coForest)
+
+liveHerb <- 120
+liveWood <- 150
+
+fxn_firebehavior(inputDF, fuelModel, LH, LW){
+  
+  
+  fuelmodel_input <- fuelModels[fuelModel,]
+  
+  
+  exampCrownFuel <- data.frame(
+    CBD = rep(mean(coForest$cbd_kgm3),nrow(inputDF)),
+    FMC = 100,
+    CBH = rep(mean(coForest$cbh_m),nrow(inputDF)),
+    CFL = rep(mean(coForest$cfl_kgm2),nrow(inputDF))
+  )
+  
+  fuelMoisture <- data.frame(inputDF$ffmlitter,
+                             inputDF$ffm,
+                             inputDF$ffm10,
+                             inputDF$ffm100,
+                             LH,
+                             LW)
+  
+  exampEnviro <- data.frame(
+    slope = 0,
+    windspeed = inputDF$windspeed * 1.609344,
+    direction = 0,
+    waf = 1
+  )
+  
+  outputDF <- data.frame(FL = rep(NA,nrow(inputDF)),
+                         ROS = rep(NA,nrow(inputDF)))
+  
+  for(i in 1:nrow(inputDF)){
+    outputIn <- rothermel(surfFuel = fuelmodel_input,
+                          moisture = fuelMoisture[i,],
+                          crownFuel = exampCrownFuel[i,],
+                          enviro = exampEnviro[i,])
+    #print(str(outputIn))
+    
+    outputDF$FL[i] <- as.numeric(outputIn$fireBehavior$`Flame Length [m]`) * 3.2808
+    outputDF$ROS[i] <- as.numeric(outputIn$fireBehavior$`Rate of Spread [m/min]`) * 3.2808
+    
+    print(i)
+  }
+  
+  combined <- cbind(inputDF,outputDF)
+  
+  return(combined)
+    
+}
+

@@ -1,0 +1,12 @@
+]0;~/Dropbox/Fire Management/RxPredict[?1034hXerxes:RxPredict danielg7$ [KXerxes:RxPredict danielg7$ gcc
+clang: [0;1;31merror: [0mno input files[0m
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ xcode-select --install
+xcode-select: error: command line tools are already installed, use "Software Update" to install updates
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ homebrew
+bash: homebrew: command not found
+[KXerxes:RxPredict danielg7$ git init
+Initialized empty Git repository in /Users/danielg7/Dropbox/Fire Management/RxPredict/.git/
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+]0;~/Dropbox/Fire Management/RxPredictXerxes:RxPredict danielg7$ git add .

@@ -1,0 +1,12 @@
+name: RxPredict
+title: RxPredict
+username:
+account: danielg7
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1647824
+bundleId: 2723646
+url: https://danielg7.shinyapps.io/RxPredict/
+when: 1578856844.93395
+asMultiple: FALSE
+asStatic: FALSE

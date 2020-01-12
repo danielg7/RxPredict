@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578772999719.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3560182000",
+    "id" : "2AE1F00F",
+    "lastKnownWriteTime" : 1578855174,
+    "last_content_update" : 1578855174167,
+    "path" : "~/Dropbox/Fire Management/RxPredict/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "cursorPosition" : "21,2",
+        "scrollLine" : "12"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

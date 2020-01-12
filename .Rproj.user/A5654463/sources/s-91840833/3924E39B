@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578855332230.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3924E39B",
+    "lastKnownWriteTime" : 6,
+    "last_content_update" : 1578855332230,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "AD368B03",
+        "caption" : "fuelModels",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=fuelModels&cache_key=AD368B03",
+        "displayedObservations" : 60,
+        "environment" : "",
+        "object" : "fuelModels",
+        "preview" : 0,
+        "totalObservations" : 60,
+        "variables" : 18
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578758220122.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "13|42|34|0|\n38|37|62|0|\n69|32|94|0|\n98|98|113|0|\n",
+    "hash" : "0",
+    "id" : "4A0D43FF",
+    "lastKnownWriteTime" : 1578772508,
+    "last_content_update" : 1578772508125,
+    "path" : "~/Dropbox/Fire Management/RxPredict/testing.R",
+    "project_path" : "testing.R",
+    "properties" : {
+        "cursorPosition" : "35,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
