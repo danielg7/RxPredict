@@ -209,14 +209,32 @@ prescription <- function(df,tempHi = 75,tempLo = 50, windHi = 8, windLo = 3,rhHi
 
 #test4 <- prescription(df = testOutput2)
 
-rxPlot <- function(df){
+rxPlot <- function(df,lat,long,rhHi,rhLo,wsHi,wsLo,tempHi,tempLo,ffmHi,ffmLo,flHi,flLo){
   library("cowplot")
+  library("maptools")
+  
+  # Calculate sunrise and sunset
+  
+  #up <- sunriset(crds = matrix(c(lat,long),nrow = 1), dateTime = df$dt, direction="sunrise")
+  #print(head(up))
+  
+  prescriptionWindow <- data.frame()
   
   cols <- c("In Prescription" = "darkgreen", "Out of Prescription" = "gray")
   
   
   RH <- ggplot(data = df, aes(x = dt, y = rh, color = rhRx))+
     scale_colour_manual("RH Prescription", values = cols)+
+    annotate("rect",
+             xmin = min(df$dt,na.rm = T),
+              xmax = max(df$dt,na.rm = T),
+              ymin = rhLo,
+              ymax = rhHi,
+              alpha = .1,
+              color = "darkgreen",
+              fill = "darkgreen")+
+#    geom_hline(yintercept = rhHi)+
+ #   geom_hline(yintercept = rhLo)+
     geom_point()+
     xlab("")+
     ylab("Relative Humidity (%)")+
@@ -229,6 +247,14 @@ rxPlot <- function(df){
   
   WS <- ggplot(data = df, aes(x = dt, y = windspeed, color = windRx))+
     scale_colour_manual("Wind Prescription", values = cols)+
+    annotate("rect",
+             xmin = min(df$dt,na.rm = T),
+             xmax = max(df$dt,na.rm = T),
+              ymin = wsLo,
+              ymax = wsHi,
+              alpha = .1,
+              color = "darkgreen",
+              fill = "darkgreen")+
     geom_point()+
     xlab("")+
     ylab("Wind Speed (mph)")+
@@ -239,6 +265,14 @@ rxPlot <- function(df){
   
   tmp <- ggplot(data = df, aes(x = dt, y = temp, color = tempRx))+
     scale_colour_manual("Temperature Prescription", values = cols)+
+    annotate("rect",
+             xmin = min(df$dt,na.rm = T),
+             xmax = max(df$dt,na.rm = T),
+              ymin = tempLo,
+              ymax = tempHi,
+              alpha = .1,
+              color = "darkgreen",
+              fill = "darkgreen")+
     geom_point()+
     xlab("")+
     ylab("Temperature (F)")+
@@ -249,6 +283,14 @@ rxPlot <- function(df){
   
   ffm <- ggplot(data = df, aes(x = dt, y = ffm, color = ffmRx))+
     scale_colour_manual("1-hr Fuel Moisture Prescription", values = cols)+
+    annotate("rect",
+             xmin = min(df$dt,na.rm = T),
+             xmax = max(df$dt,na.rm = T),
+              ymin = ffmLo,
+              ymax = ffmHi,
+              alpha = .1,
+              color = "darkgreen",
+              fill = "darkgreen")+
     geom_point()+
     xlab("")+
     ylab("1-hr Fuel Moisture (%)")+
@@ -259,13 +301,21 @@ rxPlot <- function(df){
   
   FL <- ggplot(data = df, aes(x = dt, y = FL, color = flRx))+
     scale_colour_manual("Flame Length Prescription", values = cols)+
+    annotate("rect",
+             xmin = min(df$dt,na.rm = T),
+             xmax = max(df$dt,na.rm = T),
+              ymin = flLo,
+              ymax = flHi,
+              alpha = .1,
+              color = "darkgreen",
+              fill = "darkgreen")+
     geom_point()+
     xlab("Date / Time")+
     ylab("Flame Length (ft)")+
     scale_x_datetime(labels = date_format("%F %H%M"),
                      date_breaks = "4 hours")+
     theme(panel.grid.major.y = element_blank(), panel.grid.major.x = element_line(colour="lightgray", size=0.5))+
-    theme(axis.text.x = element_text(size = 8, angle = 60, hjust = 1)) 
+    theme(axis.text.x = element_text(size = 10, angle = 60, hjust = 1)) 
   
   returnGrid <- plot_grid(RH, WS, tmp, ffm, FL, label_size = 12,align = "v",ncol=1)
   

@@ -65,7 +65,19 @@ shinyServer(function(input, output, session) {
   output$rxPlot <- renderPlot({
     validate(
       need(input$button, 'Please select a location and press the button!'))
-    outRxPlot <- rxPlot(df = rxData)
+    outRxPlot <- rxPlot(df = rxData,
+                        lat = click$lat,
+                        long = click$lng,
+                        rhHi = input$rxRHInput[2],
+                        rhLo = input$rxRHInput[1],
+                        wsHi = input$rxWindInput[2],
+                        wsLo = input$rxWindInput[1],
+                        tempHi = input$rxTempInput[2],
+                        tempLo = input$rxTempInput[1],
+                        ffmHi = input$rxFFMInput[2],
+                        ffmLo = input$rxFFMInput[1],
+                        flHi = input$rxFLInput[2],
+                        flLo = input$rxFLInput[1])
     outRxPlot
     })
 })
