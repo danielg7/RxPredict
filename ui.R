@@ -122,18 +122,18 @@ navbarPage(title = "Prescription Forecast!",id = "nav",
                                    input_FL
                                    )
                         ),
-                        hr(),
-                        selectInput("tz_input", "Time Zone:",
-                                    c("PST" = "PST",
-                                      "MST" = "MST",
-                                      "MST / Arizona" = "America/Phoenix",
-                                      "CST" = "CST",
-                                      "EST" = "EST")) %>%
-                          shinyInput_label_embed(shiny_iconlink() %>%
-                                                   bs_embed_tooltip("Select time zone of unit.")),
+                      #  hr(),
+                       # selectInput("tz_input", "Time Zone:",
+                        #            c("PST" = "PST",
+                         #             "MST" = "MST",
+                          #            "MST / Arizona" = "America/Phoenix",
+                           #           "CST" = "CST",
+                            #          "EST" = "EST")) %>%
+                #          shinyInput_label_embed(shiny_iconlink() %>%
+                 #                                  bs_embed_tooltip("Select time zone of unit.")),
                         actionButton("button", "Calculate")
                         
-                      ),
+                     ),
                       mainPanel(leafletOutput("map"), shiny_iconlink() %>%
                                                            bs_embed_tooltip("Select location for forecast.")
                                 )
