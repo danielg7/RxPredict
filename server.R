@@ -11,9 +11,12 @@ library(shiny)
 library(leaflet)
 library(shinyBS)
 library("bsplus")
+library("lutz")
 
 click <- NA
 rxData <- NA
+lat <- NA
+long <- NA
 
 source("functions.R")
 
@@ -29,9 +32,12 @@ shinyServer(function(input, output, session) {
   observeEvent(input$map_click,{
     leafletProxy('map') %>% clearMarkers()
     click <<- input$map_click
+    lat <<- click$lat
+    long <<- click$lng
+    
     if(is.null(click))
       return()
-    leafletProxy('map')%>%addMarkers(lng = click$lng, lat = click$lat)
+    leafletProxy('map')%>%addMarkers(lng = long, lat = lat)
   })
   
   observeEvent(input$button,{
@@ -40,11 +46,26 @@ shinyServer(function(input, output, session) {
     
     withProgress(message = 'Downloading data...', value = 0, {
     
-    getData <- latlongReturnDF(lat = click$lat, long = click$lng, unitConvert = TRUE)
+    getData <- latlongReturnDF(lat = lat, long = long, unitConvert = TRUE)
+    
+    incProgress(1/5,message = "Interpolating data...")
+    
     interpData <- interpolateTime(getData,type = "spline")
-    interpData$dt <- with_tz(interpData$dt, tzone = input$tz_input)
+    
+    incProgress(2/5,message = "Calculating timezone...")
+    
+    tz_fromInput <- tz_lookup_coords(lat, long, method = "accurate")
+    
+    interpData$dt <- with_tz(interpData$dt, tzone = tz_fromInput)
+    
     print(input$fuelModel)
+    
+    incProgress(3/5,message = "Calculating fire behavior...", detail = "(This may take a while.)")
+    
     interpData2 <- fxn_firebehavior(interpData, input$fuelModel,LH = input$liveHFM,LW = input$liveWFM)
+    
+    incProgress(4/5,message = "Calculating prescription...")
+    
     rxData <<- prescription(df = interpData2,
                            tempHi = input$rxTempInput[2],
                            tempLo = input$rxTempInput[1],
@@ -57,6 +78,9 @@ shinyServer(function(input, output, session) {
                            flHi = input$rxFLInput[2],
                            flLo = input$rxFLInput[1])
     
+    incProgress(5/5,message = "Done!")
+    
+    
     
     })
     updateTabsetPanel(session, "nav",selected = "Output")
@@ -66,8 +90,8 @@ shinyServer(function(input, output, session) {
     validate(
       need(input$button, 'Please select a location and press the button!'))
     outRxPlot <- rxPlot(df = rxData,
-                        lat = click$lat,
-                        long = click$lng,
+                        lat = lat,
+                        long = long,
                         rhHi = input$rxRHInput[2],
                         rhLo = input$rxRHInput[1],
                         wsHi = input$rxWindInput[2],
